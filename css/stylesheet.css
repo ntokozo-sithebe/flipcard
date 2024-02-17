@@ -1,0 +1,72 @@
+*,
+* ::before
+* ::after{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: 0px;
+}
+
+body{
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(rgb(68, 68, 176), rgb(98, 98, 205), rgb(52, 125, 150));
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container{
+    width: 350px ;
+    height: 500px ;
+    perspective: 550px;
+
+}
+
+.card{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 150ms;
+    transform-style: preserve-3d;
+}
+
+.container:hover > .card{
+    cursor: pointer;
+    transform: rotateY(180deg);
+
+
+}
+
+.front, .back{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    position: absolute;
+    backface-visibility: hidden;
+
+}
+
+.front{
+    height: 100%;
+    width: 100%;
+    background-image:url(https://i.postimg.cc/3NbX9pCC/vitamin-c-serum-stylized-2-opt-900x.webp/350x500) ;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.back{
+    background-color: rgb(179, 218, 242);
+    color: black;
+    transform: rotateY(180deg) ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+
+    
+}
